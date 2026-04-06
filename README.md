@@ -1,8 +1,6 @@
 # Hey, I'm Raj 👋
 
-Software developer and engineer with a knack for turning complex problems into clean, scalable solutions. Thrives in collaborative environments — whether leading projects, mentoring teammates, or shipping impactful work. Grounded in a strong work ethic and a genuine desire to build things that matter.
-
-Beyond the code, a competitive gamer, committed volunteer, and lifelong learner always chasing the next challenge.
+Software Engineer with strong focus on systems programming and backend development, building high-performance, concurrent applications using Rust. Experienced in designing scalable architectures, async systems, and networking applications, with hands-on work in distributed systems, real-time communication, and AI agent frameworks. Proven ability to develop memory-safe, low-latency systems leveraging modern tooling and cloud infrastructure. Passionate about building reliable, production-grade systems and solving complex engineering problems through efficient design, concurrency, and performance optimization.e.
 
 ---
 
