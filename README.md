@@ -1,85 +1,74 @@
 # Hey, I'm Raj 👋
 
-**Systems-focused Software Engineer** specializing in **Rust, backend systems, and distributed infrastructure**.
+**Software Engineer** specializing in **Rust, distributed systems, and production AI engineering**.
 
-I build **high-performance, concurrent, and low-latency systems** with a focus on:
-- Scalable backend architecture
-- Memory-safe systems programming
-- Distributed systems design
-- Async + concurrent execution models
+I build systems that handle real scale — from Rust-based edge services processing 10M+ requests daily to real-time anomaly detection pipelines and LLM-powered data agents.
 
-I enjoy solving problems at the infrastructure level where correctness, performance, and reliability matter.
-
----
-
-## 🚀 Focus Areas
-
-- ⚙️ Systems Programming (Rust, C/C++)
-- 🌐 Distributed Systems & Backend Architecture
-- ⚡ High-performance / Low-latency systems
-- 🔄 Concurrency & Async runtimes
-- 📡 Networking & protocol design
-- ☁️ Scalable cloud-native systems
+- ⚙️ High-performance backend systems in Rust (Tokio, Actix Web)
+- 📡 Event-driven architecture with Apache Kafka
+- 🤖 Production ML systems — anomaly detection, LLM agents, time-series forecasting
+- ☁️ Cloud-native infrastructure — Docker, Kubernetes, AWS, GCP
 
 ---
 
-## 🧠 Featured Projects
+## 🚀 Featured Projects
 
-### 📡 Distributed Log System (Kafka-lite)
-A simplified distributed streaming system inspired by Kafka.
+### 🚨 Anomaly Detection System
+Real-time detection pipeline across three live Kafka streams — server metrics, financial transactions, and IoT sensors.
 
-- Partitioned log storage
-- Producer / Consumer model
-- Replication across nodes
-- Persistent disk-backed storage
-- Basic leader-follower model
+- PyOD ensemble (IForest + LOF + HBOS) with majority voting
+- Warm-up buffer + automatic concept drift re-fitting every 500 events
+- FastAPI REST + WebSocket live alert feed
+- Persisted to PostgreSQL with full feature context
+- 44 pytest tests · Fully Dockerized
 
-> Focus: distributed systems, consistency, fault tolerance
-
----
-
-### ⚡ High-Performance Async Web Server
-A low-level HTTP server built from scratch in Rust.
-
-- Event-driven architecture (async I/O)
-- Custom HTTP request parser
-- Routing + middleware system
-- Connection handling + pooling
-- Benchmarking against Node/Express
-
-> Focus: networking, async systems, performance optimization
+> **Stack:** Kafka · PyOD · FastAPI · PostgreSQL · Docker · Python
 
 ---
 
-### 📦 Distributed File Storage System (S3-lite)
-A simplified object storage system inspired by Amazon S3.
+### 🤖 LLM-Powered Data Analyst Agent
+Upload any CSV and ask questions in plain English — the agent reasons over your data and returns charts, stats, and insights.
 
-- File chunking & storage
-- REST/gRPC API
-- Node-based distributed storage
-- Consistent hashing for data placement
-- Replication & recovery strategies
+- LangChain ReAct agent with three custom tools: PandasTool, PlotlyTool, StatsTool
+- Full CSV schema injected into system prompt for accurate reasoning
+- Conversation memory enables natural follow-up questions
+- 56 pytest tests · Works on any CSV with zero hardcoding
 
-> Focus: storage systems, distributed architecture, reliability
+> **Stack:** LangChain · GPT-4o · Pandas · Plotly · Streamlit · FastAPI · Python
+
+--- 
+
+### 🦀 Mini-Agent: Rust AI Agent Framework
+Rust-based AI agent implementing the full plan → act → observe execution loop.
+
+- Modular tool system with dynamic tool registration
+- Async architecture with Tokio for scalable multi-step task execution
+- Memory-safe by design using Rust ownership model
+- Published as a reusable library on crates.io
+
+> **Stack:** Rust · Tokio · LLM · Async
 
 ---
 
 ## 🛠 Tech Stack
 
 **Languages**
-Rust • C/C++ • Python • Java • TypeScript • JavaScript • Solidity
+Rust • Python • Java • TypeScript • Go • C++ • Kotlin
 
 **Backend**
-Node.js • Express • FastAPI • Django • Flask • GraphQL
+Tokio • Actix Web • Spring Boot • FastAPI • Django • Flask • SQLAlchemy • Pydantic
 
-**Systems & Infra**
-Linux • TCP/IP • Async IO • gRPC • REST
+**AI / ML**
+PyOD • TensorFlow • Scikit-learn • LangChain • LLM Agents • MLflow • Ensemble ML
+
+**Frontend**
+React.js • AngularJS • Streamlit • Plotly • WebSockets
+
+**Infrastructure**
+Kafka • Redis • Docker • Kubernetes • Terraform • AWS • GCP • Azure • GitHub Actions
 
 **Databases**
-PostgreSQL • MySQL • MongoDB • SQLite
-
-**DevOps**
-Docker • AWS • Azure • Jenkins
+PostgreSQL • MySQL • Redshift • Snowflake • CockroachDB • Amazon S3
 
 ---
 
@@ -102,12 +91,14 @@ Docker • AWS • Azure • Jenkins
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=RajMandaliya&theme=react-dark&hide_border=true"/>
 </p>
 
-## 🤝 Connect With Me
+---
 
-- LinkedIn: https://www.linkedin.com/in/raj-mandaliya-78a622249
-- GitHub: https://github.com/RajMandaliya
-- Portfolio: https://rajmandaliya-portfolio.vercel.app
+## 🤝 Connect
+
+- 💼 LinkedIn: [linkedin.com/in/raj-mandaliya-78a622249](https://www.linkedin.com/in/raj-mandaliya-78a622249)
+- 🌐 Portfolio: [rajmandaliya-portfolio.vercel.app](https://rajmandaliya-portfolio.vercel.app)
+- ✉️ Email: rajmandaliyasurvey@gmail.com
 
 ---
 
-💡 *Currently focused on building distributed systems and backend infrastructure at scale.*
+💡 *Open to Senior SDE, Staff Engineer, and ML Engineering roles in distributed systems, backend infrastructure, or AI/ML platforms.*
