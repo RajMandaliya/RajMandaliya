@@ -1,74 +1,78 @@
 # Hey, I'm Raj 👋
 
-**Software Engineer** specializing in **Rust, distributed systems, and production AI engineering**.
+**Software Engineer** specializing in **Rust, low-level systems, and distributed infrastructure**.
 
-I build systems that handle real scale — from Rust-based edge services processing 10M+ requests daily to real-time anomaly detection pipelines and LLM-powered data agents.
+I build systems from the ground up — from custom CPU emulators and cache simulators to
+Rust-based edge services processing 10M+ requests daily and event-driven fintech pipelines.
 
-- ⚙️ High-performance backend systems in Rust (Tokio, Actix Web)
-- 📡 Event-driven architecture with Apache Kafka
-- 🤖 Production ML systems — anomaly detection, LLM agents, time-series forecasting
-- ☁️ Cloud-native infrastructure — Docker, Kubernetes, AWS, GCP
+- 🦀 High-performance systems in Rust (Tokio, Actix Web, lock-free data structures)
+- ⚙️ CPU architecture — ISA design, pipeline simulation, cache modeling
+- 📡 Event-driven architecture with Apache Kafka at production scale
+- ☁️ Cloud-native infrastructure — Docker, Kubernetes, AWS
 
 ---
 
 ## 🚀 Featured Projects
 
-### 🚨 Anomaly Detection System
-Real-time detection pipeline across three live Kafka streams — server metrics, financial transactions, and IoT sensors.
+### 🖥️ cpu16 — Custom 16-bit CPU Emulator
+A complete CPU built from first principles in Rust. Every design decision — instruction
+encoding, memory layout, interrupt handling — made deliberately and documented.
 
-- PyOD ensemble (IForest + LOF + HBOS) with majority voting
-- Warm-up buffer + automatic concept drift re-fitting every 500 events
-- FastAPI REST + WebSocket live alert feed
-- Persisted to PostgreSQL with full feature context
-- 44 pytest tests · Fully Dockerized
+- Custom 35-instruction ISA with 16-bit fixed-width encoding and 5-bit FLAGS register
+- Two-pass assembler with forward-reference resolution compiling `.asm` → binary
+- 5-stage in-order pipeline (IF → ID → EX → MEM → WB) with RAW data hazard stall
+  detection, flag hazard detection for conditional branches, and 2-cycle branch flush
+- Direct-mapped write-through L1 cache classifying misses as cold vs conflict;
+  demonstrates cache thrashing on bubble sort's non-sequential access pattern
+- 6 assembly programs: bubble sort, binary search, Sieve of Eratosthenes, RPN
+  stack calculator, Fibonacci, Factorial
+- 49 integration tests · 5 versioned releases · CI: fmt + clippy + test on every push
 
-> **Stack:** Kafka · PyOD · FastAPI · PostgreSQL · Docker · Python
+> **Stack:** Rust · Custom ISA · Pipeline Simulation · Cache Modeling · Systems Programming
 
 ---
-
-### 🤖 LLM-Powered Data Analyst Agent
-Upload any CSV and ask questions in plain English — the agent reasons over your data and returns charts, stats, and insights.
-
-- LangChain ReAct agent with three custom tools: PandasTool, PlotlyTool, StatsTool
-- Full CSV schema injected into system prompt for accurate reasoning
-- Conversation memory enables natural follow-up questions
-- 56 pytest tests · Works on any CSV with zero hardcoding
-
-> **Stack:** LangChain · GPT-4o · Pandas · Plotly · Streamlit · FastAPI · Python
-
---- 
 
 ### 🦀 Mini-Agent: Rust AI Agent Framework
 Rust-based AI agent implementing the full plan → act → observe execution loop.
 
-- Modular tool system with dynamic tool registration
+- Modular tool system with dynamic tool registration and extensibility
 - Async architecture with Tokio for scalable multi-step task execution
 - Memory-safe by design using Rust ownership model
-- Published as a reusable library on crates.io
+- Published as a reusable library on [crates.io](https://crates.io)
+- ⭐ 12 stars — organic traction from the Rust community
 
-> **Stack:** Rust · Tokio · LLM · Async
+> **Stack:** Rust · Tokio · LLM APIs · Async
+
+---
+
+### 🚨 Anomaly Detection System
+Real-time detection pipeline across three live Kafka streams.
+
+- PyOD ensemble (IForest + LOF + HBOS) with majority voting
+- Automatic concept drift re-fitting every 500 events
+- FastAPI REST + WebSocket live alert feed · 44 pytest tests · Fully Dockerized
+
+> **Stack:** Kafka · PyOD · FastAPI · PostgreSQL · Docker · Python
 
 ---
 
 ## 🛠 Tech Stack
 
 **Languages**
-Rust • Python • Java • TypeScript • Go • C++ • Kotlin
+Rust • Python • Java • Go • C++ • TypeScript
 
 **Backend**
-Tokio • Actix Web • Spring Boot • FastAPI • Django • Flask • SQLAlchemy • Pydantic
-
-**AI / ML**
-PyOD • TensorFlow • Scikit-learn • LangChain • LLM Agents • MLflow • Ensemble ML
-
-**Frontend**
-React.js • AngularJS • Streamlit • Plotly • WebSockets
+Tokio • Actix Web • Spring Boot • FastAPI • JAX-RS • Hibernate
 
 **Infrastructure**
-Kafka • Redis • Docker • Kubernetes • Terraform • AWS • GCP • Azure • GitHub Actions
+Kafka • Redis • Docker • Kubernetes • Terraform • AWS • GitHub Actions
 
 **Databases**
-PostgreSQL • MySQL • Redshift • Snowflake • CockroachDB • Amazon S3
+PostgreSQL • MySQL • Amazon S3 • Redshift • Snowflake
+
+**Concepts**
+CPU architecture • Cache simulation • Pipeline hazard detection • Distributed systems •
+Memory safety • Concurrency • Event-driven architecture • CI/CD
 
 ---
 
@@ -78,7 +82,6 @@ PostgreSQL • MySQL • Redshift • Snowflake • CockroachDB • Amazon S3
   <img src="https://github-readme-stats.vercel.app/api?username=RajMandaliya&show_icons=true&theme=chartreuse-dark&hide_border=true" height="165"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=RajMandaliya&theme=chartreuse-dark&hide_border=true" height="165"/>
 </p>
-
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RajMandaliya&layout=compact&theme=chartreuse-dark&hide_border=true"/>
 </p>
@@ -97,8 +100,8 @@ PostgreSQL • MySQL • Redshift • Snowflake • CockroachDB • Amazon S3
 
 - 💼 LinkedIn: [linkedin.com/in/raj-mandaliya-78a622249](https://www.linkedin.com/in/raj-mandaliya-78a622249)
 - 🌐 Portfolio: [rajmandaliya-portfolio.vercel.app](https://rajmandaliya-portfolio.vercel.app)
-- ✉️ Email: rajmandaliyasurvey@gmail.com
+- ✉️ Email: [rajmandaliyasurvey@gmail.com](mailto:rajmandaliyasurvey@gmail.com)
 
 ---
 
-💡 *Open to Senior SDE, Staff Engineer, and ML Engineering roles in distributed systems, backend infrastructure, or AI/ML platforms.*
+💡 *Open to SDE II / SDE III roles in systems and backend infrastructure.*
